@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱心点餐系统</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❤️ 亲爱的专属点餐系统 ❤️</h1>
+            <p>今天想吃什么？选好后我会收到你的菜单哦~</p>
+        </header>
+
+        <main>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="name">你的名字：</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>选择你想吃的菜品：</label>
+                    <div class="food-options">
+                        <label class="food-item">
+                            <input type="checkbox" name="food" value="红烧排骨">
+                            <span>红烧排骨</span>
+                        </label>
+                        <label class="food-item">
+                            <input type="checkbox" name="food" value="清蒸鱼">
+                            <span>清蒸鱼</span>
+                        </label>
+                        <label class="food-item">
+                            <input type="checkbox" name="food" value="番茄炒蛋">
+                            <span>番茄炒蛋</span>
+                        </label>
+                        <label class="food-item">
+                            <input type="checkbox" name="food" value="蒜蓉西兰花">
+                            <span>蒜蓉西兰花</span>
+                        </label>
+                        <label class="food-item">
+                            <input type="checkbox" name="food" value="宫保鸡丁">
+                            <span>宫保鸡丁</span>
+                        </label>
+                        <label class="food-item">
+                            <input type="checkbox" name="food" value="酸辣汤">
+                            <span>酸辣汤</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="special-request">特别要求：</label>
+                    <textarea id="special-request" name="special-request" rows="3" placeholder="比如：少放辣、不要香菜等"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">希望用餐时间：</label>
+                    <input type="time" id="time" name="time">
+                </div>
+
+                <button type="submit" class="submit-btn">提交菜单</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>专属为你制作 ❤️</p>
+        </footer>
+    </div>
+
+    <div id="success-message" class="hidden">
+        <div class="message-box">
+            <h2>点餐成功！</h2>
+            <p>我已经收到你的菜单啦，稍后会为你准备~</p>
+            <button id="close-message">好的</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
